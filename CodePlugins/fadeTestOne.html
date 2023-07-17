@@ -1,0 +1,56 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image {
+      /* display: block;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.5s ease; */
+        width: 229px;
+        height: 229px;
+        border-radius: 114.5px;
+        position:absolute;
+        transition: opacity 0.5s ease;
+    }
+
+    .text {
+      display: block;
+      position: center;
+      width: 229;
+      border-radius: 114.5px;
+      padding: 20px;
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .container:hover .image {
+      opacity: 0;
+    }
+
+    .container:hover .text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="image" src="C:\Users\jonma\Downloads\Princess Vlei\Workin.JPG" alt="Image">
+    <div class="text">
+      <h1>Princess Vlei Workin on a lot of cool stuff</h1>
+    </div>
+  </div>
+</body>
+</html>
