@@ -1,0 +1,93 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <style>
+      .animg {
+        width: 229px;
+        height: 229px;
+        border-radius: 114.5px;
+        position: absolute;
+        transition: opacity 0.5s ease;
+      }
+
+      .box {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 51px;
+      }
+
+      .container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .text {
+        display: block;
+        position: relative;
+        width: 229px;
+        height: 229px;
+        top: 40px;
+        text-align: center;
+        border-radius: 114.5px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .container:hover .animg {
+        opacity: 0;
+      }
+
+      .container:hover .text {
+        opacity: 1;
+      }
+    </style>
+
+    <!-- images -->
+    <div class="box">
+      <div class="container">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1wpaLV-ooC4Bca2vOV1TK8PUNzgUUbels"
+          class="animg"
+          alt="flower"
+        />
+        <div class="text">
+          <h1>Animal Data WOOO WIpEeE</h1>
+        </div>
+      </div>
+      <div class="container">
+        <img
+          src="https://drive.google.com/uc?export=view&id=125w6llSdSInOQa19uQ8X0XgLOMBgL3Q2"
+          class="animg"
+          alt="Chameleon"
+        />
+        <div class="text">
+          <h1>Animal Data 2</h1>
+        </div>
+      </div>
+      <div class="container">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1VI7_LepQ1bK7NHC7RlzV4ZExjViHKeGq"
+          class="animg"
+          alt="Toad"
+        />
+        <div class="text">
+          <h1>Animal Data 2</h1>
+        </div>
+      </div>
+      <div class="container">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1PZ-QhB8f8ytCIJCJRnXWBgzRg3htEQh0"
+          class="animg"
+          alt="Spiderhead"
+        />
+        <div class="text">
+          <h1>Animal Data 2</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

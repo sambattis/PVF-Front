@@ -2,76 +2,59 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .container {
-      position: relative;
-      display: inline-block;
-      margin-right: 100px;
-    }
+  <head>
+    <style>
+      .container {
+        position: relative;
+        display: inline-block;
+      }
 
-    .image {
-      display: block;
-      width: 100px;
-      height: 100px;
+      .image {
+        /* display: block;
+      width: 400px;
+      height: 400px;
       position: absolute;
       top: 0;
       left: 0;
-      transition: opacity 0.5s ease;
-    }
+      transition: opacity 0.5s ease; */
+        width: 229px;
+        height: 229px;
+        border-radius: 114.5px;
+        position: absolute;
+        transition: opacity 0.5s ease;
+      }
 
-    .text {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 20px;
-      color: rgb(0, 0, 0);
-      font-size: 14px;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
+      .text {
+        display: block;
+        position: center;
+        width: 229;
+        border-radius: 114.5px;
+        padding: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
 
-    .container:hover .image {
-      opacity: 0;
-    }
+      .container:hover .image {
+        opacity: 0;
+      }
 
-    .container:hover .text {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img class="image" src="C:\Users\jonma\Downloads\Princess Vlei\Square.png" alt="Image 1">
-    <div class="text">
-      <h1>Text 1</h1>
-      <p>This is the text for Image 1.</p>
+      .container:hover .text {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="image"
+        src="https://drive.google.com/uc?export=view&id=1PZ-QhB8f8ytCIJCJRnXWBgzRg3htEQh0"
+        alt="Image"
+      />
+      <div class="text">
+        <h1>Princess Vlei Workin on a lot of cool stuff</h1>
+      </div>
     </div>
-  </div>
-  
-  <div class="container">
-    <img class="image" src="C:\Users\jonma\Downloads\Princess Vlei\Square.png" alt="Image 2">
-    <div class="text">
-      <h1>Text 2</h1>
-      <p>This is the text for Image 2.</p>
-    </div>
-  </div>
-  
-  <div class="container">
-    <img class="image" src="C:\Users\jonma\Downloads\Princess Vlei\Square.png" alt="Image 3">
-    <div class="text">
-      <h1>Text 3</h1>
-      <p>This is the text for Image 3.</p>
-    </div>
-  </div>
-  
-  <div class="container">
-    <img class="image" src="C:\Users\jonma\Downloads\Princess Vlei\Square.png" alt="Image 4">
-    <div class="text">
-      <h1>Text 4</h1>
-      <p>This is the text for Image 4.</p>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
