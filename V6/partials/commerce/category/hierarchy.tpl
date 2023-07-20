@@ -1,22 +1,20 @@
-@import url(//fonts.googleapis.com/css?family=Poppins:400,500,600,700);
-@import "vendor-prefixes";
-@import "mixins";
-@import "global";
-@import "header";
-@import "navigation";
-@import "banner";
-@import "content";
-@import "footer";
-@import "minicart";
-@import "gallery";
-@import "forms";
-@import "buttons";
-@import "product";
-@import "store";
-@import "membership";
-@import "search";
-@import "blog";
-@import "fancybox";
-@import "checkout";
-@import "splash";
-@import "media-queries";
+<ul>
+	{{#children}}
+		{{^hide_from_parent}}
+			<li class="{{!
+				}}{{#is_selected}}wsite-selected{{/is_selected}} {{!
+				}}{{#is_child_selected}}wsite-child-selected{{/is_child_selected}}"
+				>
+				<a href="{{url}}" class="wsite-com-link {{^is_selected}}wsite-link-unselected{{/is_selected}}">
+					<div class="wsite-com-link-text {{!
+						}}{{#is_selected}}wsite-selected{{/is_selected}} {{!
+						}}{{#is_child_selected}}wsite-child-selected{{/is_child_selected}}"
+						>
+						{{title}}
+					</div>
+				</a>
+				{{> commerce/category/hierarchy}}
+			</li>
+		{{/hide_from_parent}}
+	{{/children}}
+</ul>
