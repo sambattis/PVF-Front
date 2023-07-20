@@ -1,0 +1,56 @@
+const mysql = require('mysql');
+const http = require('http');
+
+// Create a connection pool
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'vlei'
+});
+
+// Function to execute a query
+function executeQuery(query, params, callback) {
+  pool.getConnection((err, connection) => {
+    if (err) {
+      callback(err, null);
+      return;
+    }
+
+    connection.query(query, params, (error, results) => {
+      connection.release(); // Release the connection back to the pool
+
+      if (error) {
+        callback(error, null);
+        return;
+      }
+
+      callback(null, results);
+    });
+  });
+}
+
+const query = 'SELECT * FROM ??';
+
+
+http.createServer((request, response) => {
+  if (request.method === 'GET' && request.url.substr(1) === "organism") {
+    var params = [request.url.substr(1)];
+
+    executeQuery(query, params, (err, results) => {
+      if (err) {
+        console.error('Error executing query:', err);
+        return;
+      }
+      response.statusCode = 200;
+      results.forEach((item, index) => {
+        response.write(index + ": " + item.Genus + " " + item.Species + "\n");
+      });
+      response.end();
+    });
+    
+  } else {
+    response.statusCode = 404;
+    response.end();
+  }
+}).listen(8080);
