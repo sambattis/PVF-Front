@@ -30,11 +30,11 @@ const DataChart_flora = () => {
           const data = response.data;
           console.log(data); //log data
 
-          // Fetch organism data for all unique faunaIDs
-          const faunaIDs = Array.from(new Set(data.map((item) => item.floraID)));
+          // Fetch organism data for all unique floraIDs
+          const floraIDs = Array.from(new Set(data.map((item) => item.floraID)));
           const organismResponse = await axios.get('https://pv-test.onrender.com/api/organism');
           const organismData = organismResponse.data.filter((organism) =>
-            faunaIDs.includes(organism.orgID)
+            floraIDs.includes(organism.orgID)
           );
 
           const organismMap = organismData.reduce((map, organism) => {
