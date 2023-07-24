@@ -1,0 +1,127 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      .slideimg {
+        max-width: 229px;
+      }
+      .box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 51px;
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <!-- Start of first slide -->
+      <div class="mySlides fade">
+        <div class="box">
+
+          <!-- change link 1 destination with href link -->
+          <a
+            href="http://hoheisentrust.org/"
+          >
+
+            <!-- change image 1 with src link -->
+            <img
+            src="http://www.princessvlei.org/uploads/2/4/5/1/24519386/hans_orig.png"
+              class="slideimg"
+              alt="flower"
+            />
+          </a>
+
+          <!-- change link 2 destination with href link -->
+          <a href="https://github.com/">
+
+            <!-- change image 2 with src link -->
+            <img
+              src="http://www.princessvlei.org/uploads/2/4/5/1/24519386/sandbi2_orig.png"
+              class="slideimg"
+              alt="Chameleon"
+            />
+          </a>
+
+          <!-- change link 3 destination with href link -->
+          <a href="https://www.sanbi.org/">
+
+            <!-- change image 3 with src link -->
+            <img
+              src="http://www.princessvlei.org/uploads/2/4/5/1/24519386/isixeko_orig.png"
+              class="slideimg"
+              alt="Toad"
+            />
+          </a>
+
+          <!-- change link 4 destination with href link -->
+          <a href="https://wessa.org.za/">
+
+            <!-- change image 4 with src link -->
+            <img
+              src="http://www.princessvlei.org/uploads/2/4/5/1/24519386/wessa_orig.png"
+              class="slideimg"
+              alt="Spiderhead"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Add new slide here here -->
+    </div>
+
+    <script>
+      // javascript code to perform the slideshow
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          // resets slide index when over
+          slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 8 seconds
+      }
+    </script>
+  </body>
+</html>
